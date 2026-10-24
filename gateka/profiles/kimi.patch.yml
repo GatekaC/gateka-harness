@@ -1,0 +1,20 @@
+# Variant « kimi » — Moonshot's code-specialised model, to measure against
+# the default on real treatments (price to confirm on Nebius).
+# Picked with: /go <texte> @gateka:kimi
+- id: llm-pi-ai
+  config:
+    providers:
+      nebius:
+        displayName: Nebius AI Studio
+        apiKeyEnv: NEBIUS_API_KEY
+        api: openai-completions
+        baseURL: https://api.studio.nebius.com/v1
+        models:
+          - id: moonshotai/Kimi-K2.7-Code
+          - id: deepseek-ai/DeepSeek-V4.1-Flash-1017
+            input: [text, image]
+
+- id: agent-default-model
+  config:
+    provider: nebius
+    model: moonshotai/Kimi-K2.7-Code
