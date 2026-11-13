@@ -1,0 +1,22 @@
+# Variant « code » — GLM 5.3 on Nebius, for larger code changes.
+# The variants are named after the tiers of the other Gateka-run proxies
+# (MaQI, BulkHours: fast, code, reasoning) and run the same models (owner,
+# 2026-11-13: « gateka convention should follow the rest for now »).
+# Picked with: /go <texte> @gateka:code, or the « Gateka code » button.
+- id: llm-pi-ai
+  config:
+    providers:
+      nebius:
+        displayName: Nebius AI Studio
+        apiKeyEnv: NEBIUS_API_KEY
+        api: openai-completions
+        baseURL: https://api.studio.nebius.com/v1
+        models:
+          - id: zai-org/GLM-5.3
+          - id: deepseek-ai/DeepSeek-V4.1-Flash-1017
+            input: [text, image]
+
+- id: agent-default-model
+  config:
+    provider: nebius
+    model: zai-org/GLM-5.3

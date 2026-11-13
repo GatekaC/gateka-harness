@@ -1,8 +1,8 @@
-# Gateka spike 2026-10-24 — the Nebius route for the headless profile.
-# Models by task route (gateka-data/architecture/GATEKA_ENGINE_ROUTES_PROPOSAL.md):
-#   work          deepseek-ai/DeepSeek-V4.1-Flash-1017  (default here)
-#   work_critical deepseek-ai/DeepSeek-V4-Pro-0813
-#   assess        Qwen/Qwen3-30B-A3B-Instruct-2507
+# Variant « fast » — the default: DeepSeek V4.1 Flash on Nebius.
+# The variants are named after the tiers of the other Gateka-run proxies
+# (MaQI, BulkHours: fast, code, reasoning) and run the same models (owner,
+# 2026-11-13: « gateka convention should follow the rest for now »).
+# Picked when nothing else is named; /go <texte> @gateka:fast names it.
 - id: llm-pi-ai
   config:
     providers:
@@ -14,7 +14,8 @@
         models:
           - id: deepseek-ai/DeepSeek-V4.1-Flash-1017
             input: [text, image]
-          - id: deepseek-ai/DeepSeek-V4-Pro-0813
+          - id: zai-org/GLM-5.3
+          - id: zai-org/GLM-5.2
           - id: Qwen/Qwen3-30B-A3B-Instruct-2507
 
 - id: agent-default-model
