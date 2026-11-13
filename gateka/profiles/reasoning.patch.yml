@@ -1,4 +1,5 @@
-# Variant « reasoning » — GLM 5.2 on Nebius, for the hardest reasoning; slowest.
+# Variant « reasoning » — Kimi K3.1 Pro on Nebius, for the hardest reasoning:
+# the best-scored model Nebius publishes (owner, 2026-11-13; was GLM 5.2).
 # The variants are named after the tiers of the other Gateka-run proxies
 # (MaQI, BulkHours: fast, code, reasoning) and run the same models (owner,
 # 2026-11-13: « gateka convention should follow the rest for now »).
@@ -12,11 +13,12 @@
         api: openai-completions
         baseURL: https://api.studio.nebius.com/v1
         models:
-          - id: zai-org/GLM-5.2
+          - id: moonshotai/Kimi-K3.1-Pro
+            input: [text, image]
           - id: deepseek-ai/DeepSeek-V4.1-Flash-1017
             input: [text, image]
 
 - id: agent-default-model
   config:
     provider: nebius
-    model: zai-org/GLM-5.2
+    model: moonshotai/Kimi-K3.1-Pro

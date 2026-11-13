@@ -28,7 +28,7 @@ plugin or a profile patch here, or a pull request upstream.
   model and, later, its tools. The variants are named after the tiers of
   the other Gateka-run proxies and run the same models: `fast`
   (DeepSeek-V4.1-Flash-1017) is the default, `code` (GLM-5.3) and
-  `reasoning` (GLM-5.2) are picked by name. A run passes one with `--patch`; the corridor picks it from
+  `reasoning` (Kimi-K3.1-Pro) are picked by name. A run passes one with `--patch`; the corridor picks it from
   `/go <texte> @gateka:<variant>` and meters the variant's model
   (`gateka-data/architecture/decisions/0210-*.md`).
 - `plugins/` — Gateka's own plugins, when needed (the result contract, the

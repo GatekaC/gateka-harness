@@ -15,7 +15,8 @@
           - id: deepseek-ai/DeepSeek-V4.1-Flash-1017
             input: [text, image]
           - id: zai-org/GLM-5.3
-          - id: zai-org/GLM-5.2
+          - id: moonshotai/Kimi-K3.1-Pro
+            input: [text, image]
           - id: Qwen/Qwen3-30B-A3B-Instruct-2507
 
 - id: agent-default-model
