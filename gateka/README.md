@@ -26,7 +26,7 @@ plugin or a profile patch here, or a pull request upstream.
 - `profiles/<variant>.patch.yml` — one **variant** of the engine each: the
   Nebius AI Studio route (OpenAI-compatible, `NEBIUS_API_KEY`), its default
   model and, later, its tools. `nebius` (DeepSeek-V4.1-Flash-1017) is the
-  default; `pro` (V4-Pro-0813) and `kimi` (Kimi-K2.7-Code) are there to be
+  default; `pro` (V4-Pro-0813) and `kimi` (Kimi-K3.1-Pro) are there to be
   measured. A run passes one with `--patch`; the corridor picks it from
   `/go <texte> @gateka:<variant>` and meters the variant's model
   (`gateka-data/architecture/decisions/0210-*.md`).

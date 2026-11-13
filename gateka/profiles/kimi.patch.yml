@@ -1,5 +1,7 @@
-# Variant « kimi » — Moonshot's code-specialised model, to measure against
-# the default on real treatments (price to confirm on Nebius).
+# Variant « kimi » — Moonshot's Kimi K3.1 Pro, the best-scored model Nebius
+# publishes (Artificial Analysis index 46.5 on 2026-11-13; $2 / $10 per
+# million), to measure against the default on real treatments. Until that
+# day this ran Kimi K2.7 Code, which Nebius withdrew (owner: « K3.1 Pro »).
 # Picked with: /go <texte> @gateka:kimi
 - id: llm-pi-ai
   config:
@@ -10,11 +12,12 @@
         api: openai-completions
         baseURL: https://api.studio.nebius.com/v1
         models:
-          - id: moonshotai/Kimi-K2.7-Code
+          - id: moonshotai/Kimi-K3.1-Pro
+            input: [text, image]
           - id: deepseek-ai/DeepSeek-V4.1-Flash-1017
             input: [text, image]
 
 - id: agent-default-model
   config:
     provider: nebius
-    model: moonshotai/Kimi-K2.7-Code
+    model: moonshotai/Kimi-K3.1-Pro
